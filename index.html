@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Campus Lost-Item Matcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Smart Campus Lost-Item Matcher</h1>
+    <p>Find potential matches between lost and found items.</p>
+</header>
+
+<main>
+    <section class="card">
+        <h2>Add a Report</h2>
+        <form id="itemForm">
+            <input id="itemName" placeholder="Item name" required>
+            <select id="reportType" required>
+                <option value="">Report type</option>
+                <option value="Lost">Lost</option>
+                <option value="Found">Found</option>
+            </select>
+            <select id="category" required>
+                <option value="">Category</option>
+                <option>Electronics</option>
+                <option>Books</option>
+                <option>Accessories</option>
+                <option>Documents</option>
+                <option>Other</option>
+            </select>
+            <input id="color" placeholder="Color" required>
+            <input id="location" placeholder="Location" required>
+            <input id="date" type="date" required>
+            <input id="description" placeholder="Description" required>
+            <button type="submit">Add Report</button>
+        </form>
+    </section>
+
+    <section>
+        <div class="toolbar">
+            <h2>Reports</h2>
+            <input id="search" placeholder="Search reports...">
+        </div>
+        <div id="reports" class="grid"></div>
+    </section>
+
+    <section class="card">
+        <h2>Potential Matches</h2>
+        <div id="matches"></div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
